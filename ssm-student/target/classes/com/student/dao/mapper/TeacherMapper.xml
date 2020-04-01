@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.student.dao.TeacherMapper">
+
+<select id="login" parameterType="java.lang.String" resultType="com.student.entity.Teacher">
+	select * from teacher where username= #{0} and password = #{1}
+</select>
+
+
+<insert id="insertTeacher" parameterType="com.student.entity.Teacher">
+	insert into teacher values (#{id},#{userName},#{password}) 
+</insert>
+
+</mapper>

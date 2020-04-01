@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.student.dao.StudentMapper">
+	<select id="getAllStu" resultType="com.student.entity.Student">
+		select * from student
+	</select>
+	<select id="getMaxScore" resultType="java.lang.Float">
+		select max(score) from student
+	</select>
+</mapper>
